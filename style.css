@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@600&family=Lato:wght@400;700&display=swap');
+
+body {
+    font-family: 'Lato', sans-serif;
+    /* Sage Green Gradient */
+    background: linear-gradient(135deg, #f0f4f0 0%, #e1e8e2 100%);
+    margin: 0;
+    padding-top: 100px;
+    padding-bottom: 80px;
+    color: #333;
+    min-height: 100vh;
+}
+
+/* === 1. GLASSY PROGRESS HEADER === */
+.progress-header {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 15px 20px;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(114, 133, 117, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.progress-label-row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-weight: 700;
+    color: #5e6e61;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.progress-track {
+    width: 100%;
+    height: 12px;
+    background: rgba(114, 133, 117, 0.15);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: #728575; /* SAGE GREEN THEME */
+    width: 0%;
+    border-radius: 10px;
+    transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* === 2. MAIN CONTAINER === */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    font-family: 'EB Garamond', serif;
+    color: #2c3e50;
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 5px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+h2 {
+    font-family: 'EB Garamond', serif;
+    color: #728575;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    padding-left: 10px;
+    border-left: 4px solid #728575;
+}
+
+/* === 3. GLASSY CARDS === */
+.section-card {
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 15px rgba(114, 133, 117, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.section-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(114, 133, 117, 0.2);
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.section-card.completed {
+    background: rgba(255, 255, 255, 0.95);
+    border: 2px solid #728575;
+}
+
+.card-header {
+    padding: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+    color: #2c3e50;
+    font-size: 16px;
+}
+
+.check-icon {
+    width: 28px;
+    height: 28px;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 14px;
+    transition: all 0.3s;
+    background: white;
+}
+
+.section-card.completed .check-icon {
+    background-color: #728575;
+    border-color: #728575;
+    box-shadow: 0 0 10px rgba(114, 133, 117, 0.4);
+}
+
+.card-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+    background: rgba(114, 133, 117, 0.05);
+}
+
+.card-body {
+    padding: 20px;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #4a554e;
+}
+
+/* === 4. UI ELEMENTS === */
+.badge {
+    display: inline-block;
+    background: rgba(114, 133, 117, 0.15);
+    color: #5e6e61;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    font-weight: 800;
+}
+
+.glass-btn {
+    width: 100%;
+    padding: 16px;
+    margin-top: 40px;
+    background: rgba(114, 133, 117, 0.1);
+    backdrop-filter: blur(4px);
+    border: 1px solid #728575;
+    border-radius: 16px;
+    color: #728575;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.glass-btn:hover {
+    background: #728575;
+    color: white;
+    box-shadow: 0 8px 25px rgba(114, 133, 117, 0.4);
+}
+
+/* === 5. PERSONAL BRAND FOOTER === */
+.footer {
+    text-align: center;
+    margin-top: 60px;
+    padding-bottom: 20px;
+    border-top: 1px solid rgba(114, 133, 117, 0.2);
+    padding-top: 20px;
+}
+
+.brand-name {
+    font-family: 'EB Garamond', serif;
+    font-size: 20px;
+    color: #2c3e50;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.brand-details {
+    font-size: 11px;
+    color: #7f8c8d;
+    line-height: 1.6;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}

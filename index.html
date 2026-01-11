@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1003 Roadmap | Matthew Younes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="progress-header">
+        <div class="progress-label-row">
+            <span>Application Roadmap</span>
+            <span id="progress-text">0% Done</span>
+        </div>
+        <div class="progress-track">
+            <div class="progress-fill"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>Application Guide</h1>
+        <p class="subtitle">A step-by-step companion for the Official 1003 Form.</p>
+
+        <h2>Section 1: Borrower Info</h2>
+
+        <div class="section-card" id="s1a">
+            <div class="card-header" onclick="toggleSection(this)">
+                <span>1a. Personal Information</span>
+                <div class="check-icon" onclick="toggleComplete(event, 's1a')"></div>
+            </div>
+            <div class="card-content">
+                <div class="card-body">
+                    <span class="badge">Accuracy Matters</span>
+                    <p><strong>Name:</strong> Must match your Driver's License exactly.</p>
+                    <p><strong>Marital Status:</strong> Only three choices: Married, Unmarried (Single/Divorced), or Separated.</p>
+                    <p><strong>Housing:</strong> If at current address < 2 years, you MUST complete the "Former Address" section.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-card" id="s1b">
+            <div class="card-header" onclick="toggleSection(this)">
+                <span>1b. Employment (Current)</span>
+                <div class="check-icon" onclick="toggleComplete(event, 's1b')"></div>
+            </div>
+            <div class="card-content">
+                <div class="card-body">
+                    <span class="badge">Self-Employed?</span>
+                    <p><strong>Ownership:</strong> Check "Self-Employed" if you own 25% or more of the business.</p>
+                    <p><strong>Income:</strong> Enter monthly income BEFORE taxes.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-card" id="s1c">
+            <div class="card-header" onclick="toggleSection(this)">
+                <span>1c. Previous Employment</span>
+                <div class="check-icon" onclick="toggleComplete(event, 's1c')"></div>
+            </div>
+            <div class="card-content">
+                <div class="card-body">
+                    <span class="badge">If Applicable</span>
+                    <p>Only fill this out if you have been at your current job for <strong>less than 2 years</strong>.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-card" id="s1e">
+            <div class="card-header" onclick="toggleSection(this)">
+                <span>1e. Income from Other Sources</span>
+                <div class="check-icon" onclick="toggleComplete(event, 's1e')"></div>
+            </div>
+            <div class="card-content">
+                <div class="card-body">
+                    <span class="badge">If Applicable</span>
+                    <p>Includes Alimony, Child Support, Disability, Pension, etc.</p>
+                    <p><strong>Tip:</strong> You do NOT have to list Alimony/Child Support unless you want it used to qualify for the loan.</p>
+                </div>
+            </div>
+        </div>
+
+        <h2>Section 2: Assets & Liabilities</h2>
+
+        <div class="section-card" id="s2a">
+            <div class="card-header" onclick="toggleSection(this)">
+                <span>2a. Assets (Bank Accounts)</span>
+                <div class="check-icon" onclick="toggleComplete(event, 's2a')"></div>
+            </div>
+            <div class="card-content">
+                <div class="card-body">
+                    <p>List Checking, Savings, and Money Market accounts.</p>
+                    <p><strong>Cash:</strong> Do not list physical cash ("mattress money").</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-card" id="s2b">
+            <div class="card-header" onclick="toggleSection(this)">
+                <span>2b. Other Assets</span>
+                <div class="check-icon" onclick="toggleComplete(event, 's2b')"></div>
+            </div>
+            <div class="card-content">
+                <div class="card-body">
+                    <p>Retirement (401k/IRA), Stocks, Cryptocurrency, or Proceeds from a Sale.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-card" id="s2c">
+            <div class="card-header" onclick="toggleSection(this)">
+                <span>2c. Liabilities (Debts)</span>
+                <div class="check-icon" onclick="toggleComplete(event, 's2c')"></div>
+            </div>
+            <div class="card-content">
+                <div class="card-body">
+                    <p>We usually auto-populate this from your credit report. Only add debts that might not show up (like private loans).</p>
+                </div>
+            </div>
+        </div>
+
+        <h2>Section 3: Real Estate</h2>
+
+        <div class="section-card" id="s3a">
+            <div class="card-header" onclick="toggleSection(this)">
+                <span>3a. Property You Own</span>
+                <div class="check-icon" onclick="toggleComplete(event, 's3a')"></div>
+            </div>
+            <div class="card-content">
+                <div class="card-body">
+                    <p>If you don't own any real estate, check "Does Not Apply".</p>
+                    <p>If you DO own: List all properties (including the one you are selling, if any).</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-card" id="s3b">
+            <div class="card-header" onclick="toggleSection(this)">
+                <span>3b. Mortgage Loans</span>
+                <div class="check-icon" onclick="toggleComplete(event, 's3b')"></div>
+            </div>
+            <div class="card-content">
+                <div class="card-body">
+                    <span class="badge">If Applicable</span>
+                    <p>List the mortgages attached to the properties in 3a.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-card" id="s3c">
+            <div class="card-header" onclick="toggleSection(this)">
+                <span>3c. Title Information</span>
+                <div class="check-icon" onclick="toggleComplete(event, 's3c')"></div>
+            </div>
+            <div class="card-content">
+                <div class="card-body">
+                    <span class="badge">If Applicable</span>
+                    <p>If you have owned a home in the last 3 years, answer these questions about how you held the title (Sole vs Joint).</p>
+                </div>
+            </div>
+        </div>
+
+        <h2>Section 4: Loan & Property</h2>
+
+        <div class="section-card" id="s4a">
+            <div class="card-header" onclick="toggleSection(this)">
+                <span>4a. Loan Purpose</span>
+                <div class="check-icon" onclick="toggleComplete(event, 's4a')"></div>
+            </div>
+            <div class="card-content">
+                <div class="card-body">
+                    <p><strong>Purchase:</strong> Buying a home.</p>
+                    <p><strong>Refinance:</strong> No Cash Out vs. Cash Out.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-card" id="s4b">
+            <div class="card-header" onclick="toggleSection(this)">
+                <span>4b. Other New Loans</span>
+                <div class="check-icon" onclick="toggleComplete(event, 's4b')"></div>
+            </div>
+            <div class="card-content">
+                <div class="card-body">
+                    <span class="badge">If Applicable</span>
+                    <p>Are you taking out a second mortgage (like a HELOC) on this property at the same time as this loan?</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-card" id="s4c">
+            <div class="card-header" onclick="toggleSection(this)">
+                <span>4c. Rental Income</span>
+                <div class="check-icon" onclick="toggleComplete(event, 's4c')"></div>
+            </div>
+            <div class="card-content">
+                <div class="card-body">
+                    <span class="badge">If Applicable</span>
+                    <p>Complete this if the property you are buying is a 2-4 unit Investment Property where you expect rental income.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-card" id="s4d">
+            <div class="card-header" onclick="toggleSection(this)">
+                <span>4d. Gifts & Grants</span>
+                <div class="check-icon" onclick="toggleComplete(event, 's4d')"></div>
+            </div>
+            <div class="card-content">
+                <div class="card-body">
+                    <p>If using a Gift for down payment, list it here. You will need a signed "Gift Letter" later.</p>
+                </div>
+            </div>
+        </div>
+
+        <h2>Section 5: Declarations</h2>
+
+        <div class="section-card" id="s5a">
+            <div class="card-header" onclick="toggleSection(this)">
+                <span>5a. Property & Funding Questions</span>
+                <div class="check-icon" onclick="toggleComplete(event, 's5a')"></div>
+            </div>
+            <div class="card-content">
+                <div class="card-body">
+                    <p>These questions ask about the property itself and where your money is coming from.</p>
+                    <p><strong>Important:</strong> You must disclose if any part of your down payment is borrowed.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-card" id="s5b">
+            <div class="card-header" onclick="toggleSection(this)">
+                <span>5b. Financial History</span>
+                <div class="check-icon" onclick="toggleComplete(event, 's5b')"></div>
+            </div>
+            <div class="card-content">
+                <div class="card-body">
+                    <p>These questions cover your financial past, including Bankruptcy, Foreclosure, Lawsuits, and Co-Signed debts.</p>
+                    <p>Please answer truthfully—we check public records!</p>
+                </div>
+            </div>
+        </div>
+
+        <h2>Section 6: Agreements</h2>
+
+        <div class="section-card" id="s6">
+            <div class="card-header" onclick="toggleSection(this)">
+                <span>6. Acknowledgments</span>
+                <div class="check-icon" onclick="toggleComplete(event, 's6')"></div>
+            </div>
+            <div class="card-content">
+                <div class="card-body">
+                    <p>You are certifying that the info is true. Lying on a 1003 is mortgage fraud.</p>
+                    <p>You also authorize us to order your credit report/appraisal.</p>
+                </div>
+            </div>
+        </div>
+
+        <h2>Section 7: Military</h2>
+
+        <div class="section-card" id="s7">
+            <div class="card-header" onclick="toggleSection(this)">
+                <span>7. Military Service</span>
+                <div class="check-icon" onclick="toggleComplete(event, 's7')"></div>
+            </div>
+            <div class="card-content">
+                <div class="card-body">
+                    <p>Check "Yes" if you are a Veteran, Active Duty, or Surviving Spouse.</p>
+                    <p>This checks eligibility for VA Loans ($0 Down).</p>
+                </div>
+            </div>
+        </div>
+
+        <h2>Section 8: Demographics</h2>
+
+        <div class="section-card" id="s8">
+            <div class="card-header" onclick="toggleSection(this)">
+                <span>8. HMDA Info</span>
+                <div class="check-icon" onclick="toggleComplete(event, 's8')"></div>
+            </div>
+            <div class="card-content">
+                <div class="card-body">
+                    <p>You may check <strong>"I do not wish to provide this information"</strong> for Race, Sex, and Ethnicity.</p>
+                </div>
+            </div>
+        </div>
+
+        <button class="glass-btn" onclick="localStorage.clear(); location.reload();">Reset Progress</button>
+
+        <div class="footer">
+            <div class="brand-name">
+                By Matthew Younes | NMLS #2751438
+            </div>
+            <div class="brand-details">
+                <br>
+                Equal Housing Opportunity<br>
+                Employed by Consumer Trust Mortgage | NMLS #185144
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
